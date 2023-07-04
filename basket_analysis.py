@@ -15,7 +15,7 @@ df=df[~df['InvoiceNo'].str.contains('C')]
 
 
 
-invoices=(df[df['Country']=='France']
+invoices=(df[df['Country']=='Italy']
           .groupby(['InvoiceNo','Description'])['Quantity']
           .sum().unstack().reset_index().fillna(0)
           .set_index('InvoiceNo'))
