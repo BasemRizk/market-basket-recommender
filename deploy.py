@@ -12,3 +12,5 @@ if selected_item is not None:
     df=find_combos(selected_item)
     name_column_html = df['consequents'].to_frame().to_html(index=False, header=False)
     st.markdown(name_column_html, unsafe_allow_html=True)
+
+#write in console and write    streamlit run deploy.py
